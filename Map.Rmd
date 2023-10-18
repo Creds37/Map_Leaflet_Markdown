@@ -1,0 +1,28 @@
+---
+title: "MAP"
+author: "Redson"
+date: "2023-10-18"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+chooseCRANmirror()
+```
+
+
+```{r}
+install.packages("leaflet")
+```
+
+```{r}
+library(leaflet)
+```
+
+
+```{r}
+leaflet() %>%
+  setView(lng = 34.3015, lat = -13.2543, zoom = 6) %>%
+  addTiles() %>%
+  addMarkers(lng = 34.3015, lat = -13.2543, popup = "Malawi")
+```
+
